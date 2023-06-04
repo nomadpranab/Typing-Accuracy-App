@@ -1,0 +1,13 @@
+#body{
+    background-color: #394867;
+}
+html{
+    background-color: #394867;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kaushan+Script&family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Dongle', sans-serif;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+}
