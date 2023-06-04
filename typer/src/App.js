@@ -35,8 +35,8 @@ function TypingSpeedApp() {
 
   return (
     <div id="body" className="text-center">
-      <h1 className="text-center p-5" style={{color:"#F6F1F1"}}> Hey Coder !</h1>
-      
+      <h1 className="text-center p-3 mt-3" style={{color:"#F6F1F1"}}> Hey Coder ! </h1>
+      <h5 className="text-center " style={{color:"#F6F1F1"}}> Check your typing accuracy</h5>
 
       <div className="card mb-4 mt-5 m-auto" id="card"style={{width:"16rem",backgroundColor:"#F6F1F1"}}>
         <div className="card-body pb-3">
@@ -53,7 +53,7 @@ function TypingSpeedApp() {
       </div>
 
       <div>
-      <textarea className="mt-3 mb-3" style={{backgroundColor:"#F6F1F1",border:`5px solid #FCCA6F`,borderRadius:"0.4rem"}}
+      <textarea className="mt-3 mb-3 p-3" style={{backgroundColor:"#F6F1F1",border:`5px solid #FCCA6F`,borderRadius:"0.4rem"}}
       rows="4" cols="60" 
         type="text"
         placeholder="type here"
@@ -65,11 +65,11 @@ function TypingSpeedApp() {
       <div style={{color:"#FEFF86"}}>You will get the result once you enter the correct input</div>
      
       
-      <h4 className="mt-3" style={{color:"#F6F1F1"}}>Your accuracy is : </h4>
+      <h4 className="p-3" style={{color:"#F6F1F1"}}>Your accuracy is : </h4>
 
       {input === text && (
         <>
-          <h5 style={{color:"#FEFF86"}}>{accuracy}%</h5>
+          <h2 style={{color:"#FEFF86"}}>{accuracy}%</h2>
           <br></br>
         </>
       )}
