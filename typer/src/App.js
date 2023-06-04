@@ -31,12 +31,14 @@ function TypingSpeedApp() {
     setAccuracy(100 - Math.round((count / text.length) * 100));
   };
 
+  
+
   return (
     <div id="body" className="text-center">
       <h1 className="text-center p-5" style={{color:"#F6F1F1"}}> Hey Coder !</h1>
       
 
-      <div className="card mb-4 mt-5 m-auto" style={{width:"16rem",backgroundColor:"#F6F1F1"}}>
+      <div className="card mb-4 mt-5 m-auto" id="card"style={{width:"16rem",backgroundColor:"#F6F1F1"}}>
         <div className="card-body pb-3">
           <h5 className="card-title">Hi!</h5>
           <h6 className="card-subtitle mb-2 text-muted">Quote of the day</h6>
@@ -51,9 +53,10 @@ function TypingSpeedApp() {
       </div>
 
       <div>
-      <textarea className="mt-3 mb-3" style={{backgroundColor:"#F6F1F1"}}
-      rows="4" cols="60"
+      <textarea className="mt-3 mb-3" style={{backgroundColor:"#F6F1F1",border:`5px solid #FCCA6F`,borderRadius:"0.4rem"}}
+      rows="4" cols="60" 
         type="text"
+        placeholder="type here"
         value={input}
         onChange={handleInputChange}
         onKeyDown={calc}
@@ -66,7 +69,7 @@ function TypingSpeedApp() {
 
       {input === text && (
         <>
-          <span>{accuracy}</span>
+          <h5 style={{color:"#FEFF86"}}>{accuracy}%</h5>
           <br></br>
         </>
       )}
