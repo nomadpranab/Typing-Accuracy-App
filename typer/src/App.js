@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Style.css';
 
+
 function TypingSpeedApp() {
   const [text, settext] = useState("");
   const [input, setInput] = useState("");
@@ -11,7 +12,7 @@ function TypingSpeedApp() {
   //generating random quotes by API
   useEffect(() => {
     const sentence = async () => {
-      let response = await fetch("https://type.fit/api/quotes");
+      let response = await fetch("https://type.fit/api/quotes"); 
       const data = await response.json();
       let index = Math.floor(Math.random() * 1000);
       settext(data[index].text);
@@ -19,15 +20,15 @@ function TypingSpeedApp() {
     sentence();
   }, []);
 
-  
 
+//InputChange handling 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     setInput(inputValue);
   };
 
-  //Calculation Of accuracy
 
+  //Calculation Of accuracy
   const calc = (event) => {
     if (event.key === "Backspace") {
       setCount(count + 1);
@@ -36,7 +37,7 @@ function TypingSpeedApp() {
   };
 
   
-
+//output
   return (
     <div id="body" className="text-center">
       <h1 className="text-center p-3 mt-3" style={{color:"#F6F1F1"}}> Hey Coder ! </h1>
