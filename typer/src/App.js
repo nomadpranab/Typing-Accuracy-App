@@ -7,6 +7,8 @@ function TypingSpeedApp() {
   const [accuracy, setAccuracy] = useState(0);
   const [count, setCount] = useState(0);
 
+
+  //generating random quotes by API
   useEffect(() => {
     const sentence = async () => {
       let response = await fetch("https://type.fit/api/quotes");
@@ -16,6 +18,8 @@ function TypingSpeedApp() {
     };
     sentence();
   }, []);
+
+  
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
